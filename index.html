@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Calculadora</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="body">
+
+
+
+
+    <div class="conteiner">
+
+        
+      <div class="header" id="header">
+
+        <div class="calc">calc</div>  <p>THEME</p>
+
+        <label>1 2 3</label>
+        <input class='range' id="range" type="range" min="1" max="100" value="0" onchange="mudarback()">
+
+
+     </div>
+
+        <div class="visor" id="visor">
+
+            <h1 id="valorum">0</h1>
+            
+
+            <input type="button" value="" id="sinal">
+
+            <h1 id="valordois"></h1>
+
+            <h1 id="result"></h1>
+
+        </div>
+
+
+
+
+        <input type="text" class="numeros um" value='' id='numberone'>
+
+        <input type="text" value='' class="numeros dois" id='numbertwo'>
+
+
+
+
+
+
+        <div id="teclado">
+
+           
+
+            <input type="button" value="0" class='botao zero botoes' onclick="digvalue(this); diminuir();" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value="1" class='botao um botoes' onclick="digvalue(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value="2" class='botao dois botoes' onclick="digvalue(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value="3" class='botao tres botoes' onclick="digvalue(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value="4" class='botao quatro botoes' onclick="digvalue(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value="5" class='botao cinco botoes' onclick="digvalue(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value="6" class='botao seis botoes' onclick="digvalue(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value="7" class='botao sete botoes' onclick="digvalue(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value="8" class='botao oito botoes' onclick="digvalue(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value="9" class='botao nove botoes' onclick="digvalue(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" value='.' class='botao ponto botoes' onclick="addpontoum(); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" id="mais" class="botao mais botoes" value=" + " onclick="calcular(this); mudarinput(this); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" id="menos" class="botao menos botoes" value=" - " onclick="calcular(this); mudarinput(); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" id="vezes" class="botao vezes botoes" value=" x " onclick="calcular(this); mudarinput(); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" id="dividir" class="botao dividir botoes" value=" ÷ " onclick="calcular(this); mudarinput()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+
+            <input type="button" value='=' class="igualdois" id="igualdois">
+
+            <input type="button" id="igual" class="botao igual botoes" value="=" onclick="calcular(this); showresult()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            
+
+            <input type="button" id="reset" class="botao reset botoes" value="RESET" onclick="resetar(); aumentar(); diminuir()" onmouseover="clarear(this)" onmouseout="cornormal(this)">
+            <input type="button" id='del' class="botao del botoes" value="DEL" onmouseover="clarear(this)" onmouseout="cornormal(this)" onclick="del()">
+
+        </div>
+
+        
+
+    </div>
+
+</body>
+
+</html>
